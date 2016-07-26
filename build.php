@@ -9,8 +9,6 @@ $feed   =   'http://projectivemotion.com/feed/';
 
 $feedrc =   simplexml_load_file($feed);
 
-echo $feedrc->channel->item[0]->title;
-
 $items  =   [];
 foreach($feedrc->channel->item as $item):
     $items[]    =   sprintf("<li><a href=\"%s\">%s</a> » <i><span>%s</span></i></li>",
@@ -19,6 +17,9 @@ foreach($feedrc->channel->item as $item):
             $item->pubDate
             );
 endforeach;
+
+if(empty($items))
+    die("Error Ocurred!");
 
 $inout  =   ['index.source.html' => 'index.html'];
 
