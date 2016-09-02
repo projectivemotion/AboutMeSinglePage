@@ -29,6 +29,14 @@ foreach($inout as $in => $out)
     $rendered   =   preg_replace('/{posts}/', implode("\n", $items), $template);
     $rendered   =   preg_replace_callback('#\{([^\}]*?)\}#', function ($matches) use ($config) {
         $key    =   $matches[1];
+        if(preg_match('#\.php$#', $key))
+        {
+            if(!file_exists($key)) return '<!-- ' . $key . ' not found. -->';
+
+            ob_start();
+            include($key);
+            return ob_get_clean();
+        }
         return $config[$key];
     }, $rendered);
     file_put_contents($out, $rendered);
