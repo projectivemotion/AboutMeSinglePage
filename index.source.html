@@ -5,14 +5,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="shortcut icon" href="http://amadomartinez.mx/favicon.ico">
-        <title>Amado Martinez - About Me</title>
-        <meta name="author" content="Amado Martinez">
+        <title>{name} - About Me</title>
+        <meta name="author" content="{name}">
         <meta name="description" content="I am a web developer working remotely from Mexico.">
-        <meta name="keywords" content="Amado Martinez, Freelance Web Developer, LAMP Developer, Freelancer Mexico, Web Developer Mexico">
+        <meta name="keywords" content="{name}, Freelance Web Developer, LAMP Developer, Freelancer Mexico, Web Developer Mexico">
         <!--<link rel="alternate" type="application/rss+xml" title="RSS" href="http://amadomartinez.mx/feed.xml">-->
 
-        <meta content="Amado Martinez" property="og:site_name">
-      <meta content="Amado Martinez - Freelance Web Developer" property="og:title">
+        <meta content="{name}" property="og:site_name">
+      <meta content="{name} - Freelance Web Developer" property="og:title">
       <meta content="website" property="og:type">
       <meta content="I develop web applications." property="og:description">
       <meta content="http://amadomartinez.mx/" property="og:url">
@@ -20,7 +20,7 @@
         <meta name="twitter:card" content="summary">
         <meta name="twitter:site" content="@amadocodes">
         <meta name="twitter:creator" content="@amadocodes">
-          <meta name="twitter:title" content="Amado Martinez - Freelance Web Development">
+          <meta name="twitter:title" content="{name} - Freelance Web Development">
           <meta name="twitter:url" content="http://amadomartinez.mx/">
           <meta name="twitter:description" content="I develop web applications.">
         <!-- Font awesome icons -->
@@ -49,20 +49,20 @@
         <div class="container">
             <div class="col-sm-3">
               <div class="fixed-condition">
-                <a href="http://amadomartinez.mx/"><img id="about" src="https://avatars3.githubusercontent.com/u/39117?v=3&s=460" height="150px" width="150px"></a>
-                <h1 class="author-name">Amado Martinez</h1>
+                <a href="/"><img id="about" src="{avatar}" height="150px" width="150px"></a>
+                <h1 class="author-name">{name}</h1>
                 
                 <div id="about">
-                    Linux, Apache, Mysql, Php Developer
+                    {about}
                 </div>
 
                 <div class="social">
                     <ul>
-                            <li><a href="http://amadomartinez.mx/#" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="skype:amado9989?chat" target="_blank"><i class="fa fa-skype"></i></a></li>
-                            <li><a href="https://twitter.com/amadocodes" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="https://mx.linkedin.com/in/amado-martinez-142a6613" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a href="https://stackoverflow.com/users/2723108/amado-martinez" target="_blank"><i class="fa fa-stack-exchange"></i></a></li>
+                            <!--<li><a href="http://amadomartinez.mx/#" target="_blank"><i class="fa fa-facebook"></i></a></li>-->
+                            <li><a href="{skype}" target="_blank"><i class="fa fa-skype"></i></a></li>
+                            <li><a href="{twitter}" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="{linkedin}" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="{stackexchange}" target="_blank"><i class="fa fa-stack-exchange"></i></a></li>
                     </ul>
                 </div>
 
@@ -75,15 +75,15 @@
                 <strong>Navigation</strong><br>
                     &nbsp;» <a href="/">Home</a> <br>
                     &nbsp;» <a class="about" href="/">About Me</a><br>
-                    &nbsp;» <a class="about" href="http://projectivemotion.com/projects/">Clients</a><br>
-                    &nbsp;» <a class="about" href="https://github.com/projectivemotion">Github</a><br>
+                    &nbsp;» <a class="about" href="{clients}">Clients</a><br>
+                    &nbsp;» <a class="about" href="{github}">Github</a><br>
                     &nbsp;» <a class="about" href="/">XML Feed</a><br>
               </div><!-- end /.fixed-condition -->
             </div>
 
             <div class="col-sm-8 col-offset-1">
                 <div id="home">
-    <h1>Web Development, Linux, Code Snippets</h1>
+    <h1>{title}</h1>
     <hr>
     <ol class="posts">
         {posts}
@@ -101,7 +101,7 @@
                             <p>location: Reynosa, Mexico. </p>
                             <p></p>
 
-                            <p>email: <a href="mailto:"><img style="margin-top:-4px; margin-left:-20px;" height="16px" src="http://projectivemotion.com/files/2009/06/amado-at.png" /> </p>
+                            <p>email: <a href="mailto:"><img style="margin-top:-4px; margin-left:-20px;" height="16px" src="http://projectivemotion.com/files/2009/06/amado-at.png" /> </a></p>
 
                         </div>
 
@@ -126,11 +126,11 @@
 
 
                 <footer>
-                    © Amado Martinez
+                    © {name}
 
                     <!-- original theme: http://jekyllthemes.org/themes/stack-problems/ -->
                      
-                    - <a href="https://github.com/projectivemotion">https://github.com/projectivemotion</a> - LAMP
+                    - <a href="{github}">{github}</a> - LAMP
 
                     <!--<div class="btn-github" style="float:right;">-->
                         <!--<iframe src="./index_files/github-btn.html" frameborder="0" scrolling="0" width="85" height="20px"></iframe>                    -->

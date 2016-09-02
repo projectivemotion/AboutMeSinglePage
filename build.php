@@ -5,9 +5,9 @@
  * @author Amado Martinez <amado@projectivemotion.com>
  */
 
-$feed   =   'http://projectivemotion.com/feed/';
+$config =   require('config.php');
 
-$feedrc =   simplexml_load_file($feed);
+$feedrc =   simplexml_load_file($config['feed']);
 
 $items  =   [];
 foreach($feedrc->channel->item as $item):
@@ -27,6 +27,10 @@ foreach($inout as $in => $out)
 {
     $template   =   file_get_contents($in);
     $rendered   =   preg_replace('/{posts}/', implode("\n", $items), $template);
+    $rendered   =   preg_replace_callback('#\{([^\}]*?)\}#', function ($matches) use ($config) {
+        $key    =   $matches[1];
+        return $config[$key];
+    }, $rendered);
     file_put_contents($out, $rendered);
 }
 
