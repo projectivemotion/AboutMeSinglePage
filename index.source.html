@@ -4,25 +4,25 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="shortcut icon" href="http://amadomartinez.mx/favicon.ico">
+        <link rel="shortcut icon" href="/favicon.ico">
         <title>{name} - About Me</title>
         <meta name="author" content="{name}">
-        <meta name="description" content="I am a web developer working remotely from Mexico.">
-        <meta name="keywords" content="{name}, Freelance Web Developer, LAMP Developer, Freelancer Mexico, Web Developer Mexico">
-        <!--<link rel="alternate" type="application/rss+xml" title="RSS" href="http://amadomartinez.mx/feed.xml">-->
+        <meta name="description" content="{description}">
+        <meta name="keywords" content="{keywords}">
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="{feed}">
 
         <meta content="{name}" property="og:site_name">
-      <meta content="{name} - Freelance Web Developer" property="og:title">
+      <meta content="{name} - {og_title}" property="og:title">
       <meta content="website" property="og:type">
-      <meta content="I develop web applications." property="og:description">
-      <meta content="http://amadomartinez.mx/" property="og:url">
-      <meta content="http://amadomartinez.mx/index_files/logo-high-resolution.png" property="og:image">
+      <meta content="{og_description}" property="og:description">
+      <meta content="{og_url}" property="og:url">
+      <meta content="{og_image}" property="og:image">
         <meta name="twitter:card" content="summary">
-        <meta name="twitter:site" content="@amadocodes">
-        <meta name="twitter:creator" content="@amadocodes">
-          <meta name="twitter:title" content="{name} - Freelance Web Development">
-          <meta name="twitter:url" content="http://amadomartinez.mx/">
-          <meta name="twitter:description" content="I develop web applications.">
+        <meta name="twitter:site" content="@{twitter_user}">
+        <meta name="twitter:creator" content="@{twitter_user}">
+          <meta name="twitter:title" content="{name} - {og_title}">
+          <meta name="twitter:url" content="{og_url}">
+          <meta name="twitter:description" content="{og_description}">
         <!-- Font awesome icons -->
 
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
@@ -31,7 +31,9 @@
         <!--<link rel="stylesheet" href="./index_files/syntax.css">-->
 
         <!-- Bootstrap core CSS -->
-        <link href="./index_files/bootstrap.min.css" rel="stylesheet">
+        <!--<link href="./index_files/bootstrap.min.css" rel="stylesheet">-->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
 
         <!-- Fonts -->
         <link href="./index_files/css" rel="stylesheet" type="text/css">
@@ -53,7 +55,7 @@
                 <h1 class="author-name">{name}</h1>
                 
                 <div id="about">
-                    {about}
+                    {about_mini}
                 </div>
 
                 <div class="social">
@@ -77,7 +79,7 @@
                     &nbsp;» <a class="about" href="/">About Me</a><br>
                     &nbsp;» <a class="about" href="{clients}">Clients</a><br>
                     &nbsp;» <a class="about" href="{github}">Github</a><br>
-                    &nbsp;» <a class="about" href="/">XML Feed</a><br>
+                    &nbsp;» <a class="about" href="{feed}">XML Feed</a><br>
               </div><!-- end /.fixed-condition -->
             </div>
 
@@ -96,13 +98,7 @@
                         </header>
 
                         <div class="post-content">
-                            <p>I am a freelance developer. I work across all timezones! </p>
-
-                            <p>location: Reynosa, Mexico. </p>
-                            <p></p>
-
-                            <p>email: <a href="mailto:"><img style="margin-top:-4px; margin-left:-20px;" height="16px" src="http://projectivemotion.com/files/2009/06/amado-at.png" /> </a></p>
-
+                            {about_long}
                         </div>
 
                     </article>
@@ -145,7 +141,8 @@
         <!-- Placed at the end of the document so the pages load faster -->
         <!--<script src="./index_files/jquery.min.js"></script>-->
         <!--<script src="./index_files/jquery-migrate-1.2.1.min.js"></script>-->
-        <script src="./index_files/bootstrap.min.js"></script>
+        <!--<script src="./index_files/bootstrap.min.js"></script>-->
+        <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
         <!--<script src="./index_files/super-search.js"></script>-->
         <!--<script src="./index_files/thickbox-compressed.js"></script>-->
         <!--<script src="./index_files/projects.js"></script>-->
