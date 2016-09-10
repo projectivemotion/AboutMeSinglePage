@@ -24,7 +24,7 @@ return [
     'og_description'    =>  'I develop web applications.',
     'og_url'    =>  'http://amadomartinez.mx/',
     'og_image'    =>  'http://amadomartinez.mx/index_files/logo-high-resolution.png',
-    'twitter_user'    =>  '@amadocodes',
+    'twitter_user'    =>  'amadocodes',
 
     // page stuff
     'avatar'   =>  'https://avatars3.githubusercontent.com/u/39117?v=3&s=460',
