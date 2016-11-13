@@ -9,6 +9,11 @@ $config =   require('config.php');
 
 $feedrc =   simplexml_load_file($config['feed']);
 
+
+if($feedrc === FALSE){
+	throw new Exception("Failed to load feed.");
+}
+
 $items  =   [];
 foreach($feedrc->channel->item as $item):
     $items[]    =   sprintf("<li><a href=\"%s\">%s</a> » <i><span>%s</span></i></li>",
